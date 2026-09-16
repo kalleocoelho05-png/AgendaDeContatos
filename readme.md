@@ -15,6 +15,7 @@ Construir uma Agenda de Contatos completa, iniciando com uma solução procedura
 | v0.0.0 | Variáveis simples | Permite armazenar apenas um contato |
 | v0.1.0 | Arrays | Permite vários contatos com capacidade fixa |
 | v0.2.0 | List + ArrayList | Permite vários contatos com tamanho dinâmico |
+| v0.3.0 | List + ArrayList | Adiciona a opção de alteração de contatos cadastrados |
 
 ### v0.0.0 — Programação Procedural Básica
 
@@ -52,27 +53,75 @@ Principais características:
 - busca sequencial nos arrays;
 - remoção de elementos com reorganização física do array (deslocamento de itens).
 
+### v0.2.0 — Armazenamento Dinâmico com ArrayList
+
+Terceira versão da Agenda.
+
+Principais características:
+
+- uso da API de Coleções do Java (`List` e `ArrayList`);
+- uso de Generics (`<String>`);
+- alocação e redimensionamento dinâmico;
+- métodos da API (`add`, `get`, `remove`, `size`, `indexOf`, etc.);
+- iteração com `for-each`;
+- simplificação das operações de inserção, busca e remoção.
+
+### v0.3.0
+
+Nesta versão, a Agenda de Contatos recebeu a implementação da funcionalidade de **alteração de contatos**.
+
+### Principais características e conceitos
+
+- Nova opção no menu: **Alterar contato**
+- Busca do contato a ser alterado
+- Atualização dos dados nas listas (`List` / `ArrayList`) utilizando o método `set()`
+- Reutilização da lógica de validação/busca para localização do registro antes da modificação
+
 ## Versão atual
+ **v1.0.0 - Modularização das funcionalidades**
 
-**v0.2.0**
+Nesta versão, o projeto Agenda de Contatos foi reorganizado por meio da criação de métodos.
 
-Nesta versão, a Agenda de Contatos passou a utilizar a API de Coleções do Java (`List` e `ArrayList`) para o armazenamento dinâmico de contatos.
+### Principais alterações
 
-### Principais conceitos
+- Modularização do código procedural.
+- Criação do método `adicionar()`.
+- Criação do método `listar()`.
+- Criação do método `pesquisar()`.
+- Criação do método `atualizar()`.
+- Criação do método `excluir()`.
+- Simplificação do `switch-case`.
+- Uso de parâmetros para compartilhar os dados entre os métodos.
+- Organização das responsabilidades do método `main()`.
 
-- Interface `List` e classe `ArrayList`
-- Generics (`<String>`)
-- Alocação e redimensionamento dinâmico
-- Métodos da API (`add`, `get`, `remove`, `size`, `indexOf`, etc.)
-- Iteração com `for-each`
-- Simplificação das operações de inserção, busca e remoção
+### Armazenamento
+
+Os contatos continuam sendo armazenados em três listas do tipo `List<String>`:
+
+- nomes;
+- celulares;
+- e-mails.
+
+### Conceitos trabalhados
+
+- métodos;
+- parâmetros;
+- argumentos;
+- retorno;
+- `void`;
+- escopo de variáveis;
+- modularização;
+- refatoração.
+
+> A versão v1.0.0 mantém as funcionalidades da v0.3.0, alterando principalmente a organização interna do código.
 
 ### Próximas versões
 
 O projeto continuará evoluindo.
 <!-- - `v0.1.0` — armazenamento com Arrays; -->
 <!-- - `v0.2.0` — armazenamento com List e ArrayList; -->
-- `v0.3.0` e posteriores — modularização, introdução de classes e objetos, encapsulamento, DAO, MVC, Swing, JDBC e banco de dados.
+<!-- - `v0.3.0` — funcionalidade de alterar contato; -->
+- `v1.0.0` - Modularização das funcionalidades
 
 ## Controle de versões
 
@@ -81,6 +130,10 @@ As versões estáveis do projeto são identificadas por tags Git.
 Exemplo:
 
 ```text
-v0.0.0
-v0.1.0
-v0.2.0
+- V0
+  - V0.0.0
+  - V0.1.0
+  - V0.2.0
+  - V0.3.0
+- V1
+  - V1.0.0
